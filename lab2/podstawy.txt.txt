@@ -1,0 +1,29 @@
+1.System kontroli wersji- jest to oprogramowanie s³u¿¹ce do œledzenia zmian g³ównie w kodzie Ÿród³owym oraz pomocy programistom w ³¹czeniu zmian dokonanych przez wiele osób w ró¿nych momentach.
+b)scentralizowany
+a)rozproszony – nie jest wymagany ci¹g³y dostêp do centralnego repozytorium.Nadaje siê do ma³ych i du¿ych projektów.Œwietnie sprawdza siê te¿ lokalnie.
+2.Workflow-w sensie szerszym, pojêcie okreœlaj¹ce sposób przep³ywu informacji pomiêdzy rozmaitymi obiektami bior¹cymi udzia³ w jej przetwarzaniu. W wê¿szym sensie jest to okreœlenie sposobu przep³ywu dokumentów pomiêdzy pracownikami wykonuj¹cymi pewien zalgorytmizowany zespó³ czynnoœciProcesy workflow przedstawia siê zwykle w postaci grafu.
+Typowy sposób pracy wygl¹da nastêpuj¹co:
+*Pliki tworzymy i modyfikujemy w katalogu roboczym.
+*Jeœli chcemy, by zmiany zosta³y uwzglêdnione, pliki przenosimy do przechowalni.
+*Gdy chcemy zachowaæ bie¿¹cy stan projektu w repozytorium, zatwierdzamy zmiany.
+3.Systemy kontroli wersji dziel¹ siê na:
+a)scentralizowane, oparte na architekturze klient-serwer (np. CVS, Subversion)
+b)rozproszone, oparte na architekturze P2P (np. BitKeeper, Code Co-op, svk, Git).
+W tych pierwszych istnieje jedno centralne repozytorium, z którym wszyscy u¿ytkownicy systemu synchronizuj¹ swoje zmiany, a te drugie pozwalaj¹ na prowadzenie równoprawnych, niezale¿nych ga³êzi, które mo¿na dowolnie synchronizowaæ ze sob¹ nawzajem, np. poprzez e-mail (Code Co-op). Wybór odpowiedniego typu systemu kontroli wersji zale¿y od potrzeb projektu.
+4.Polecenia:
+a)Init- s³u¿y to zainicjowania nowego repozytorium
+b)Clone-po u¿uciu zostaje pobrana ka¿da rwwizja, ka¿dego pliku w historii projektu (s³u¿y do klonowania istniej¹cego repozytorium)
+c)Add-dodaje zmienione pliki do wirtualnej listy, któr¹ za chwilê zapiszemy u¿ywaj¹c polecenia commit.
+d)Status-To polecenie wyœwietli aktualny status pracy nad projektem. Dziêki niemu zobaczymy które pliki by³y modyfikowane, ale nie zosta³y jeszcze zapisane poleceniem commit. Jeœli nie mamy nic nowego, dostaniemy komunikat nothing to commit (working directory clean). Jeœli natomiast pliki ulegn¹ zmianie od poprzedniego u¿ycia commit, zostanie wyœwietlone odpowiednie podsumowanie.
+e)Diff-podgl¹d plików które zosta³y zmodyfikowane (git diff- pokazuje które dok³¹dnie linie zosta³y dodane, a które zosat³y usuniête- w postaci ³atki)
+f)commit-Tym poleceniem zapiszemy aktualny stan naszego projektu.
+g)reset-resetuje zmiany w lokalnym repozytorium
+h)rm-usuwa plik ze zbioru plików œledzonych oraz z katalogu roboczego
+i)mv-zmiany nazwy plikó w repozytorium
+j)branch- branch to  naszym projekcie jest to dzia³, sekcja, ga³¹Ÿ kodu. Nadal znajdujemy siê w obrêbie jednego projektu, ale mo¿emy rozdziliæ go na dwie ga³êzie- 
+k)checkout-umo¿liwia prze³¹czenie pomiêdzy ró¿nymi ga³êziami kodu w naszym projekcie
+l)merge-porwót do ga³êzi pierwotnej z zapisanymiu zmianami
+³)log-To polecenie s³u¿y nam do przejrzenia historii zmian dokonanych w projekcie
+m)stash-pozwala na od³o¿enie na bok dotychczasowego projektu na bok (do szufladki) po czym dokonujemy zmian, zapisujemy je i powracamy do od³o¿onego projektu.
+n)pull-pobiera dane z serwera na bazie którego oryginalnie stworzyliœmy swoje repozytorium i próbuje automatycznie scalic zmiany  z kodem roboczym nad którym aktualnie, lokalnie pracujemy
+o)push- umieszanie naszej pracy (ga³êzi g³ównej) na zawn¹trz, aby podzielic siê ni¹ z innymi u¿ytkownikami.
